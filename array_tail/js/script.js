@@ -16,10 +16,10 @@ const alertEl = document.querySelector('.alert');
 const btn = document.querySelector('button');
 
 btn.addEventListener('click' , function(){
-    const numbersEl = parseInt(document.getElementById('numbers')).value;
+    const numbersEl = parseInt(document.getElementById('numbers').value);
     console.log(numbersEl)
-//     if(!isNaN(numbersEl)){
-//         for()
-//     }
+    if(!isNaN(numbersEl)){
+        for()
+    }
     
 })
