@@ -43,7 +43,4 @@ if (trovato === true){
     msg = 'Oh no, devo uscire a comprare il cocomero!'
 }
 
-
-   
-
 console.log(msg)
