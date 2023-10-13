@@ -30,14 +30,19 @@ console.log(frigoEl)
 let trovato = false
 let msg;
 
+// ciclo
 for(let i = 0; i < frigoEl.length; i++){
     if (frigoEl[i] === 'cocomero'){
         trovato = true
-        msg = 'Trovato! Devo solo preparare il cocktail.'
-    }else {
-        msg = 'Oh no, devo uscire a comprare il cocomero!'
-    }  
 } 
+}
+
+if (trovato === true){
+    msg = 'Trovato! Devo solo preparare il cocktail.'
+}else{
+    msg = 'Oh no, devo uscire a comprare il cocomero!'
+}
+
 
    
 
