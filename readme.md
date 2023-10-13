@@ -19,7 +19,7 @@ Phases:
 *Tips/Guidelines:*
 *Yes, we know the includes() function exists but we don't want to use it to search the refrigerator.*
 
-### The tail of the Array (array_tail)**
+### The tail of the Array (array_tail)
 
 
 We create an array by asking the user how many elements it will contain and generating as many random numbers from 1 to 100 as there are elements to insert.
@@ -30,7 +30,7 @@ We then print the last 5 elements of the Array
 *Suggestions:*
 *It is probably worth checking that the number of elements in the queue is not greater than the number of total elements in the array*
 
-### Bonuses (array_bonus)**
+### Bonuses (array_bonus)
 
 Create two arrays that have different numbers of elements.
 Add elements to the array that has the fewest elements until it has as many as the other.
