@@ -9,7 +9,7 @@
 
 
 
-// casella input e bottone e richimarli con una variabile
+
 
 
 const alertEl = document.querySelector('.alert');
@@ -19,7 +19,12 @@ btn.addEventListener('click' , function(){
     const numbersEl = parseInt(document.getElementById('numbers').value);
     console.log(numbersEl)
     if(!isNaN(numbersEl)){
-        for()
+        for(let i= 1; i <= numbersEl -1; i++){
+
+
+        }
     }
     
 })
+
+// casella input e bottone e richimarli con una variabile
