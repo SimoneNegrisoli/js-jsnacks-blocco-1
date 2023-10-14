@@ -11,20 +11,50 @@
 
 
 
+        // casella input e bottone e richimarli con una variabile
 
 const alertEl = document.querySelector('.alert');
 const btn = document.querySelector('button');
+let valido = false
+let msg;
 
+        // generazione numeri cusali
+let numeriGenerati = [];
+
+        // evento bottone
 btn.addEventListener('click' , function(){
-    const numbersEl = parseInt(document.getElementById('numbers').value);
-    console.log(numbersEl)
-    if(!isNaN(numbersEl)){
-        for(let i= 1; i <= numbersEl -1; i++){
 
+        // mi prendo i valori che metto nel campo di input
+    let numbersEl = parseInt(document.getElementById('numbers').value);
 
+        // validità numero
+    if(!isNaN(numbersEl && parseInt(numbersEl) > 0)){
+        valido = true
+
+        for(let i= 0; i < parseInt(numbersEl); i++){
+            let numeroCasuale = Math.floor(Math.random() * 100);
+            numeriGenerati.push(numeroCasuale);
         }
-    }
-    
-})
 
-// casella input e bottone e richimarli con una variabile
+        // stampo fuori dal ciclo se no me ne stampa per ogni giro
+        console.log(numeriGenerati)
+    }
+
+        // stampo gli ultimi 5 elementi dell'array
+    const ultimiElemnti = numeriGenerati.slice(- 5);
+    console.log(ultimiElemnti)
+
+    
+        // validità msg
+    if (valido === true) {
+        msg = `Ultimi 5 numeri generati:   ${ultimiElemnti};`
+    
+    }else {
+        msg = 'Inserisci un numero!';
+        }
+
+    
+
+    // stampo il messaggio nell'elemento "alert" nell'HTML
+    alertEl.textContent = msg;
+    })
