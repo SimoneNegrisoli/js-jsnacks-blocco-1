@@ -6,37 +6,42 @@ Aggiungi elementi all’array che ha meno elementi fino a quando ne avrà tanti 
 
 
 
-const boxEl1 = [ 'sqaure1', 'sqaure2', 'sqaure3', 'sqaure4', 'sqaure5']
+const boxEl1 = [ 'sqaure1', 'sqaure2', 'sqaure3', 'sqaure4',];
 
-const boxEl2 = [ 'circle1']
+const boxEl2 = [ 'circle1', 'circle2', 'circle3', 'circle4', 'circle5', 'circle6'];
+
+const boxSquareEl = document.getElementById('box1');
+const box2CircleEl = document.getElementById('box2');
+
+const square = document.querySelectorAll('.square')
+const circle = document.querySelectorAll('.circle')
+
 
 let msg;
 
-
-
-
 if (boxEl1.length < boxEl2.length) {
-    
+    const diff = boxEl2.length - boxEl1.length;
+    for (let i = 0; i < diff; i++) {
+      boxEl1.push(boxEl2[i]);
+    }
+
+    msg = 'Ora box1 è uguale a box2';
+
+  } else if (boxEl1.length > boxEl2.length) {
     const diff = boxEl1.length - boxEl2.length;
-    
-  for (let i = 0; i < diff; i++) {
-    boxEl1.push(boxEl2[i]); 
+
+    for (let i = 0; i < diff; i++) {
+      boxEl2.push(boxEl1[i]);
+    }
+    msg = 'Ora box2 è uguale a box1';
   }
-  msg = 'ora box1 è ugale a box2'
 
-
-
-} else if (boxEl1.length > boxEl2.length) {
-
-  const diff = boxEl1.length - boxEl2.length;
-  
-  for (let i = 0; i < diff; i++) {
-    boxEl2.push(boxEl1[i]);
-  }
-  msg = 'ora box2 è ugale a box1'
-
-}
+const alertEl = document.querySelector('.alert');
+alertEl.innerHTML = msg;
 
 console.log(msg)
 console.log(boxEl1);
 console.log(boxEl2);
+
+
+// chiedere come avrei potuto spostare gli oggetti
