@@ -10,19 +10,28 @@ const boxEl1 = [ 'sqaure1', 'sqaure2', 'sqaure3', 'sqaure4',];
 
 const boxEl2 = [ 'circle1', 'circle2', 'circle3', 'circle4', 'circle5', 'circle6'];
 
-const boxSquareEl = document.getElementById('box1');
-const box2CircleEl = document.getElementById('box2');
+const boxSquareEl = document.querySelector('.box1');
+const box2CircleEl = document.querySelector('.box2');
 
 const square = document.querySelectorAll('.square')
 const circle = document.querySelectorAll('.circle')
 
+const btn = document.querySelector('button')
+
+
 
 let msg;
 
-if (boxEl1.length < boxEl2.length) {
+
+btn.addEventListener('click', function(){
+
+  if (boxEl1.length < boxEl2.length) {
     const diff = boxEl2.length - boxEl1.length;
     for (let i = 0; i < diff; i++) {
       boxEl1.push(boxEl2[i]);
+      const newBox = document.createElement('div');
+      newBox.classList.add('circle');
+      boxSquareEl.append(newBox);
     }
 
     msg = 'Ora box1 è uguale a box2';
@@ -38,6 +47,9 @@ if (boxEl1.length < boxEl2.length) {
 
 const alertEl = document.querySelector('.alert');
 alertEl.innerHTML = msg;
+
+})
+
 
 console.log(msg)
 console.log(boxEl1);
